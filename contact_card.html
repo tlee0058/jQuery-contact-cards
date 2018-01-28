@@ -1,0 +1,37 @@
+<html>
+   <head>
+       <title>The Codingdojo ColorClicker!</title>
+       <link rel="stylesheet" href="contact_card.css">
+       <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+       <script type="text/javascript">
+          $(document).ready(
+              function(){
+                  $('form').submit(function(){
+                    $('li').append($('input[name="first_name"]').val() + 
+                    $('input[name="last_name"]').val() +
+                    $('input[name="description"]').val());
+                    return false;
+                  });
+
+        </script>
+   </head>
+   <body>
+      <form id="left">
+        <label for="first_name">First Name:</label>
+            <input type="text" name="first_name">
+        <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name">
+        <label for="description">Description:</label>
+            <input type="textarea" name="description">
+        <input id="submit" type="submit" value="Add User">
+      </form>
+
+      <div id="right">
+          <ul>
+              <li></li>
+          </ul>
+
+      </div>
+
+   </body>
+</html>
